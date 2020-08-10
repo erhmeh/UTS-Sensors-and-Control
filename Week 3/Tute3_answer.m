@@ -1,7 +1,7 @@
 %% Question 1
 clear all
 close all
-bag = rosbag('/home/maleen/rosbags/tutorial_RGBD.bag');
+bag = rosbag('/home/lyingcake/Downloads/tutorial_RGBD.bag');
 
 depthImages = select(bag,'Topic', '/camera/depth/image_raw');
 firstDepthImage = readMessages(depthImages, 1);
