@@ -51,3 +51,5 @@ pcshow(scan1_ptcloud)
 pcshow(scan32_ptcloud)
 
 tform = pcregistericp(scan1_ptcloud,scan32_ptcloud);
+
+
