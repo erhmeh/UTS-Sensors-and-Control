@@ -14,7 +14,6 @@ def image_callback(msg):
         gray = cv2.cvtColor(cv2_img, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.1, 4)
         for (x, y, w, h) in faces:
-            print "boop"
             cv2.rectangle(gray, (x, y), (x+w, y+h), (255, 0, 0), 2)
             milliseconds = int(round(time.time() * 1000))
             filename = '/home/lyingcake/Desktop/UTS-Sensors-and-Control/Assignment/python/imgout/facebw_' + str(milliseconds) + '.jpeg'
