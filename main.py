@@ -62,6 +62,8 @@ class face_loc:
                 cv2.rectangle(gray, (x, y), (x+w, y+h), (255, 0, 0), 2)
                 font = cv2.FONT_HERSHEY_SIMPLEX
                 # provide feedback depending on where the face is located within the frame.
+                print("X Error: " + (img_xMax/2 - x))
+                print("Y Error: " + (img_yMax/2 - y))
                 if x < img_xMax/2 - frameTol:
                     text = "Move Left"
                 elif x > img_xMax/2 + frameTol:
