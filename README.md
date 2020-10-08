@@ -4,7 +4,7 @@
   
 ### System overview, setup and dependencies
 
-Tested on:  
+**Tested on:**  
 Ubuntu 18.04    
 ROS Melodic   
 Python 3.6.10   
@@ -12,19 +12,19 @@ OpenCV 4.4.0
 Matlab R2020a   
 Peter Corke's RVC Toolbox (modified) - this has been included in the git *TODO    
   
-Files included:  
-1 x main.py *TODO if happy with edits, change the file Nick upoloaded main2.py to main.py  
+**Files included:**  
+1 x main.py **TODO if happy with edits, change the file Nick upoloaded main2.py to main.py**
 1 x haarcascade_frontalface_default.xml  
 1 x Visual_servoing_SCMS.m  
 1 x rosbag_record_kinetic.bag  
 1 x rosbag_record_realsense.bag  
   
-To run:  
+**To run:**  
 python main.py  
   
 To run python3 with ROS, a virtual environment (using anaconda) can be used. For instructions: https://medium.com/@zuxinl/ubuntu-18-04-ros-python3-anaconda-cuda-environment-configuration-cb8c8e42c68d      
   
-Program overview (main.py):  
+**Program overview (main.py):**  
 Our application aims to perform the task of aligning a face in the centre of the image plane at a specified depth.
 This project has real world applications and requires addressing the perception problems image detection and feature extraction.
 
@@ -56,7 +56,7 @@ ROS callback function provides the main functionality of the program.
 The main function runs.
  
 
-Matlab Analysis (Visual_servoing_SCMS.m):
+**Matlab Analysis (Visual_servoing_SCMS.m):**
 One of the key aims of visual servoing is to determine the velocity of camera required to track features accurately. 
 
 
