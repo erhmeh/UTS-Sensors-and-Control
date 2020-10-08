@@ -1,16 +1,16 @@
 # Sensors and Control for Mechatronic Systems 41014
-# Group 8 project: Visual Servoing using RGB-D
-Jamin Early (99133391), Nick Welsh (99132021), Tanya Nassir (98062033)
+## Group 8 project: Visual Servoing using RGB-D
+### Jamin Early (99133391), Nick Welsh (99132021), Tanya Nassir (98062033)
   
-System overview, setup and dependencies
+### System overview, setup and dependencies
 
-Tested on:
-Ubuntu 18.04
-ROS Melodic
-Python 3.6.10
-OpenCV 4.4.0
-Matlab R2020a
-Peter Corke's RVC Toolbox (modified) - this has been included in the git *TODO
+Tested on:  
+Ubuntu 18.04  
+ROS Melodic 
+Python 3.6.10 
+OpenCV 4.4.0 
+Matlab R2020a 
+Peter Corke's RVC Toolbox (modified) - this has been included in the git *TODO  
 
 Files included:
 1 x main.py *TODO if happy with edits, change the file Nick upoloaded main2.py to main.py
