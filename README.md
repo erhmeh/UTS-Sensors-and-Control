@@ -75,7 +75,7 @@ The main function is in section 1.4
  - The feature Jacobian established the realtionship between camera fetaures and the velocity. Depth is estimated in this simulation   
  - The velocity is calculated as the combination of gain (lambda), psuedo Moore-Pentose and error
  - The inverse of the robot's Jacobian is used to update joint velocities
- - Once the camera has moved one step, the current position is updated using forward kinematics and the process is repeated.  
+ - Once the camera has moved one step, the current position is updated using forward kinematics and the process is repeated until the    error is zero. 
   
   The script provides useful window outputs to see the simulated image plane, joint velocities, cartesian velocities, joint angles and camera position (x, y, z, roll, pitch and yaw).
 
