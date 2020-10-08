@@ -56,7 +56,7 @@ ROS callback function provides the main functionality of the program.
 The main function runs.
  
 
-**Matlab Analysis (Visual_servoing_SCMS.m):**
+**Matlab Analysis (Visual_servoing_SCMS.m):**  
 One of the key aims of visual servoing is to determine the velocity of camera required to track features accurately. 
 To perform analysis of how this project could be integrated with a 6-DOF robot (eye-in-hand) we chose Matlab to calcuate the interaction matrix. Using the camera's intrinsic parameters and the values computed in main.py, this script can be used to simulate the velocity required for a UR10 to track the target points.  
   
