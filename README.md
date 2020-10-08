@@ -1,5 +1,5 @@
-Sensors and Control for Mechatronic Systems 41014
-Group 8 project: Visual Servoing using RGB-D
+# Sensors and Control for Mechatronic Systems 41014
+# Group 8 project: Visual Servoing using RGB-D
 Jamin Early (99133391), Nick Welsh (99132021), Tanya Nassir (98062033)
   
 System overview, setup and dependencies
@@ -22,7 +22,7 @@ Files included:
 To run:
 python main.py
 
-# To run python3 with ROS, a virtual environment (using anaconda) can be used. For instructions: https://medium.com/@zuxinl/ubuntu-18-04-ros-python3-anaconda-cuda-environment-configuration-cb8c8e42c68d    
+To run python3 with ROS, a virtual environment (using anaconda) can be used. For instructions: https://medium.com/@zuxinl/ubuntu-18-04-ros-python3-anaconda-cuda-environment-configuration-cb8c8e42c68d    
 
 Program overview (main.py):
 Our application aims to perform the task of aligning a face in the centre of the image plane at a specified depth.
@@ -33,7 +33,7 @@ To detect a target image (a face), our application utilises the Haar Cascade cla
 
 Our application has been developed to work with multiple cameras, subscribing to different rostopics for rgb and depth. We have included a simple configuration variable to allow for quick changes. 
 
-# 2 rosbag files included to test application on different hardware
+2 rosbag files included to test application on different hardware
 Depending on which hardware is tested line #24 of main.py must be changed to reflect the rostopics that are subscribed to.
 0 = Kinetic
 1 = Realsense
