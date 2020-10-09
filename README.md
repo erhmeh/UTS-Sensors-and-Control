@@ -17,7 +17,7 @@ Peter Corke's RVC Toolbox (modified) - this has been included in the git *TODO
 1 x haarcascade_frontalface_default.xml  
 1 x Visual_servoing_SCMS.m  
 1 x rosbag_record_kinetic.bag**TODO**    
-1 x rosbag_record_realsense.bag**TODO**      
+1 x rosbag_realsense.bag**TODO**      
   
 **To run:**  
 python main.py  
@@ -26,9 +26,9 @@ To run python3 with ROS, a virtual environment (using anaconda) can be used. For
   
 **Program overview (main.py):**  
 Our application aims to perform the task of aligning a face in the centre of the image plane at a specified depth.
-This project has real world applications and requires addressing the perception problems image detection and feature extraction.
+This project has real world applications and requires addressing the perception problems of image detection and feature extraction.
 
-To detect a target image (a face), our application utilises the Haar Cascade classifier through openCV to determine if a face is located in the image plane. This allows the location of the face to be recorded and a rectangle to be annotated to the output window, track the target face across the screen.
+To detect a target image (a face), our application utilises the Haar Cascade classifier through openCV to determine if a face is located in the image plane. This allows the location of the face to be recorded and a rectangle to be annotated to the output window, as well as track the target face across the screen.
 #For more info regarding Harr Cascades refer to https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html
 
 Our application has been developed to work with multiple cameras, subscribing to different rostopics for rgb and depth. We have included a simple configuration variable to allow for quick changes. 
@@ -48,9 +48,8 @@ ROS callback function provides the main functionality of the program.
    to the screen.
  - A calculation to determine the centre x,y is used to determine the error from centre and depth of the centre of the face.
  - The depth values obtained through ROS are converted to cv float value that can be used for feedback.
- - Using the values obtained, the controller provides feedback to the user on how to move and providing visual servoing
-   through the difference in the observed position and desired position.
- - Once the face is centred, the program provides feedback on the distance of the target to the camera. When the target is in the        correct location (x,y,z) a photo is taken and stored on the system. (This directory will need to changed depending on local system.    variable 'imgDir').
+ - Using the values obtained, the controller provides feedback to the user on how to move and providing visual servoing through the error or difference in the observed position and desired position.
+ - Once the face is centred, the program provides feedback on the distance of the target to the camera. When the target is in the correct location (x,y,z) a photo is taken and stored on the system. (This directory will need to changed depending on local system.    variable 'imgDir').
  - The bgr image is published through ros if required
 
 The main function runs.
