@@ -1,6 +1,6 @@
 # Sensors and Control for Mechatronic Systems 41014
 ## Group 8 project: Visual Servoing using RGB-D
-### Jamin Early (99133391), Nick Welsh (99132021), Tanya Nassir (98062033)
+### Jamin Early (99133391), Nicholas Welsh (99132021), Tanya Nassir (98062033)
   
 ### System overview, setup and dependencies
 
