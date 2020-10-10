@@ -19,10 +19,7 @@ Peter Corke's RVC Toolbox - robot-9.10Small_Modified (included with realsense ro
 1 x rosbag_record_kinetic.bag  
 1 x rosbag_realsense.bag   
 
-Kinetic Rosbag:
-https://drive.google.com/file/d/1Bk5fmK_yNQEZdR5cr4Zb_CWrlI0TVyZD/view?usp=sharing  
-  
-Realsense Rosbag:
+Rosbags and toolbox:  
 https://studentutsedu-my.sharepoint.com/:f:/g/personal/99132021_student_uts_edu_au/EtMX-09xkxRLiVLdeIjGNVwBYMmDOTTTWXZ1apGWkS63nQ?e=nIkRaS
   
 **To run:**  
