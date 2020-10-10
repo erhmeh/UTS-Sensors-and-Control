@@ -24,18 +24,15 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 camera_hardware = 1
 
 if (camera_hardware == 0):
-# 0 for Jamin (Kinect v2)
+    # 0 for Jamin (Kinect v2)
     imageTopic = "/kinect2/hd/image_color"
     depthTopic = "/kinect2/sd/image_depth_rect"
     imgDir = "/home/lyingcake/Desktop/UTS-Sensors-and-Control/Assignment/python/imgout/facebw_"
 elif (camera_hardware == 1):
-# 1 for Nick (realsense)
+    # 1 for Nick (realsense)
     imageTopic = "/camera/color/image_raw"
     depthTopic = "/camera/depth/image_rect_raw"
     imgDir = "/home/ndw/SCMS/Assignment/images/"
-
-# img_xMax = 1280
-# img_yMax = 800
 
 squareSize = 200
 frameTol = 30
@@ -50,7 +47,6 @@ class face_loc:
         self.image_sub = rospy.Subscriber(
             imageTopic, Image, self.callback)  # Image subscriber; calls the callback function every time a new image is published to the broker
 
-
     # Callback function
 
     def callback(self, data):
@@ -58,7 +54,7 @@ class face_loc:
             # convert the ROS image message to an OpenCV image
             cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
             # Detect image size
-            img_yMax,img_xMax, c = cv_image.shape
+            img_yMax, img_xMax, c = cv_image.shape
             #print("width: ", img_xMax)
             #print("height: ", img_yMax)
             # Harr Cascade face detection only works for BW images, so we need to convert it
@@ -72,21 +68,19 @@ class face_loc:
                 centre_x = x+w//2
                 centre_y = y+h//2
                 # provide feedback depending on where the face is located within the frame
-                print("X Error: " , (img_xMax/2 - centre_x))
-                print("Y Error: " , (img_yMax/2 - centre_y))
+                print("X Error: ", (img_xMax/2 - centre_x))
+                print("Y Error: ", (img_yMax/2 - centre_y))
                 # Print x, y coordinates of top left corner of face rectangle
-                # print("X: " , x)
-                # print("Y: " , y)
-                print("Xmax: " , img_xMax/2)
-                print("Ymax: " , img_yMax/2)
+                print("Xmax: ", img_xMax/2)
+                print("Ymax: ", img_yMax/2)
                 # Prints coordinates of the face centre
-                print("X2: " , centre_x)
-                print("Y2: " , centre_y)
+                print("X2: ", centre_x)
+                print("Y2: ", centre_y)
                 depthImgFace = rospy.wait_for_message(depthTopic, Image)
                 face_cv_depth_image = self.bridge.imgmsg_to_cv2(
-                depthImgFace, "32FC1")
-                depth_array=face_cv_depth_image[centre_y, centre_x]
-                print("Centre of face Depth: " , depth_array)
+                    depthImgFace, "32FC1")
+                depth_array = face_cv_depth_image[centre_y, centre_x]
+                print("Centre of face Depth: ", depth_array)
 
                 # find the distance to the face wihthin the frame
                 if centre_x < img_xMax/2 - frameTol:
@@ -105,7 +99,6 @@ class face_loc:
                         depthImg, "32FC1")
                     # find the distance to the face within the frame
                     distToFace = cv_depth_image[middle_y_depth, middle_x_depth]
-                    #print("Dist to face: " , distToFace)
                     if distToFace < 450 and distToFace > 400:
                         text = "Perfect. Say cheese!"
                         milliseconds = int(round(time.time() * 1000))
