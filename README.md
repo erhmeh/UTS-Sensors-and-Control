@@ -16,7 +16,7 @@ Peter Corke's RVC Toolbox - robot-9.10Small_Modified (included with realsense ro
 1 x main.py  
 1 x haarcascade_frontalface_default.xml  
 1 x Visual_servoing_SCMS.m  
-1 x rosbag_record_kinetic.bag  
+1 x jamin-kinectv2-faceposeloc.bag  
 1 x rosbag_realsense.bag   
 
 Rosbags and toolbox:  
