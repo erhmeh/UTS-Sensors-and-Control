@@ -14,10 +14,10 @@ Peter Corke's RVC Toolbox (modified) - this has been included in the git *TODO
   
 **Files included:**  
 1 x main.py 
-1 x haarcascade_frontalface_default.xml  
-1 x Visual_servoing_SCMS.m  
-1 x rosbag_record_kinetic.bag**TODO**    
-1 x rosbag_realsense.bag
+1 x haarcascade_frontalface_default.xml
+1 x Visual_servoing_SCMS.m
+1 x rosbag_record_kinetic.bag
+1 x rosbag_realsense.bag**TODO**
 
 Kinetic Rosbag:
 https://drive.google.com/file/d/1Bk5fmK_yNQEZdR5cr4Zb_CWrlI0TVyZD/view?usp=sharing
