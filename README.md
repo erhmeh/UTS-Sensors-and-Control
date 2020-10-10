@@ -10,7 +10,7 @@ ROS Melodic
 Python 3.6.10   
 OpenCV 4.4.0   
 Matlab R2020a   
-Peter Corke's RVC Toolbox (modified) - this has been included with realsense rosbag   
+Peter Corke's RVC Toolbox - robot-9.10Small_Modified (included with realsense rosbag)     
   
 **Files included:**  
 1 x main.py  
