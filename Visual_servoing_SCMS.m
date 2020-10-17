@@ -88,10 +88,13 @@ function [] = Lab8Solution()
             % exact depth from simulation (not possible in practice)
             pt = homtrans(inv(Tcam), P);
             J = cam.visjac_p(uv, pt(3, :));
+           
         elseif ~isempty(Zest)
             J = cam.visjac_p(uv, Zest);
+            
         else
             J = cam.visjac_p(uv, depth);
+             
         end
 
         % compute the velocity of camera in camera frame
@@ -172,7 +175,7 @@ function [] = Lab8Solution()
 
 end
 
-%% Functions for plotting
+Functions for plotting
 
 function plot_p(history, uv_star, camera)
     %VisualServo.plot_p Plot feature trajectory
